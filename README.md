@@ -5,23 +5,79 @@
 
 A Leiningen template for generate the basic Clojure/Java project template.
 
-### Usage
+### Basic Usage
+
+- For project that you like to include Java for interops 
+
+```shell
+# To generate the CLI with Java code for JVM interops
+lein new gen-cli jvm-cli +java && cd jvm-cli && lein deps :tree && lein run
+```
+
+You will get the following structure :
 
 ```
-git clone https://github.com/agilecreativity/gen-cli.git && cd gen-cli
-lein install
-
-# Then you can create new CLI skeletion quickly like
-mkdir -p ~/tmp && cd ~/tmp
-
-# Then generate the new CLI, and run it quickly
-lein new gen-cli awesome-cli && cd awesome-cli && lein deps :tree && lein run
-
-# To generate the CLI with with Java code for interops try
-lein new gen-cli awesome-cli +java && cd awesome-cli && lein deps :tree && lein run
+jvm-cli
+├── CHANGELOG.md
+├── LICENSE
+├── README.org
+├── project.clj
+└── src
+    ├── main
+    │   ├── clojure
+    │   │   └── jvm_cli
+    │   │       └── core.clj
+    │   ├── java
+    │   │   └── jvm_cli
+    │   │       └── Demo.java
+    │   └── resources
+    └── test
+        ├── clojure
+        │   └── jvm_cli
+        │       └── core_test.clj
+        ├── java
+        │   └── jvm_cli
+        │       └── DemoTest.java
+        └── resources
 ```
+
+- For simple project (without +java option)
+
+```shell
+# To generate the new CLI without Java interops
+lein new gen-cli simple-cli && cd simple-cli && lein deps :tree && lein run
+```
+
+You will get the following structure :
+
+```
+simple-cli
+├── CHANGELOG.md
+├── LICENSE
+├── README.org
+├── project.clj
+└── src
+    ├── main
+    │   ├── clojure
+    │   │   └── simple_cli
+    │   │       └── core.clj
+    │   └── resources
+    └── test
+        └── clojure
+            └── simple_cli
+                └── core_test.clj
+```
+
+For both type of projects, you will already have the initial git commit for the project.
+It is ready for you to push to Github when you are ready to work on by you/your team.
+
+*Pro Tips*
+
+You can do this very quickly if you use [gh-utils](https://github.com/agilecreativity/gh-utils)
+which allow you to create your git repository on Github from the command line.
 
 ### Links
+
 - [Leiningen Mixed Projects](https://github.com/technomancy/leiningen/blob/stable/doc/MIXED_PROJECTS.md) template
 
 ### License
