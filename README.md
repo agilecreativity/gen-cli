@@ -1,5 +1,7 @@
-
 ## gen-cli
+
+[![Clojars Project](https://img.shields.io/clojars/v/gen-cli/lein-template.svg)](https://clojars.org/gen-cli/lein-template)
+[![Dependencies Status](https://jarkeeper.com/agilecreativity/gen-cli/status.png)](https://jarkeeper.com/agilecreativity/gen-cli)
 
 A Leiningen template for generate the basic Clojure/Java project template.
 
