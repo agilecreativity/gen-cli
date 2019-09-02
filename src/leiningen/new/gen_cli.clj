@@ -43,7 +43,7 @@
 (defn files-to-render [opts]
   (cond-> ["project.clj"
            "dot-gitignore"
-           "README.org"
+           "README.md"
            "LICENSE"
            "CHANGELOG.md"
            "src/main/resources/dot-gitkeep"
@@ -91,7 +91,7 @@
         (apply main/abort (str "Invalid option: ") opt ". Valid options are" plus-opts)))
 
     (main/info (format "Generating fresh lein new gen-cli %s" name))
-    (main/info (format "Please see %s/README.org for more information." name))
+    (main/info (format "Please see %s/README.md for more information." name))
     (let [data (template-data name opts)
           files (format-files-args data opts)]
       (apply ->files data files))
