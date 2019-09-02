@@ -1,5 +1,5 @@
-(defproject gen-cli/lein-template "0.1.0"
-  :description "Simple Leiningen template for creating a simple Clojure CLI."
+(defproject gen-cli/lein-template "0.1.1"
+  :description "Leiningen template with mixed Clojure/Java support."
   :url "https://github.com/agilecreativity/gen-cli"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}

@@ -1,12 +1,14 @@
-** gen-cli
 
-A Leiningen template for generate the basic Clojure command line interface (CLI) quickly.
+## gen-cli
 
-** Usage
+A Leiningen template for generate the basic Clojure/Java project template.
 
-#+BEGIN_SRC shell
+### Usage
+
+```
 git clone https://github.com/agilecreativity/gen-cli.git && cd gen-cli
 lein install
+
 # Then you can create new CLI skeletion quickly like
 mkdir -p ~/tmp && cd ~/tmp
 
@@ -15,12 +17,12 @@ lein new gen-cli awesome-cli && cd awesome-cli && lein deps :tree && lein run
 
 # To generate the CLI with with Java code for interops try
 lein new gen-cli awesome-cli +java && cd awesome-cli && lein deps :tree && lein run
-#+END_SRC
+```
 
-** Links
-*** [[https://github.com/technomancy/leiningen/blob/stable/doc/MIXED_PROJECTS.md][Mixed Project Template]]
+### Links
+- [Leiningen Mixed Projects](https://github.com/technomancy/leiningen/blob/stable/doc/MIXED_PROJECTS.md) template
 
-** License
+### License
 
 Copyright © 2019 Burin Choomnuan
 
